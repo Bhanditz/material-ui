@@ -34,7 +34,7 @@
   },
   "peerDependencies": {
     "react": ">=0.13",
-    "react-tap-event-plugin": "0.1.8"
+    "react-tap-event-plugin": "0.1.7"
   },
   "devDependencies": {
     "react-tools": "^0.13",
