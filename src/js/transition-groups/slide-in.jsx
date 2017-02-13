@@ -28,9 +28,11 @@ var SlideIn = React.createClass({
 
     //Add a custom className to every child
     React.Children.forEach(this.props.children, function(child) {
+        /*
       child.props.className = child.props.className ?
         child.props.className + ' mui-transition-slide-in-child':
         'mui-transition-slide-in-child';
+        */
     });
 
     return (
