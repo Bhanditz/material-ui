@@ -66,7 +66,7 @@ var Tabs = React.createClass({
     var tabs = React.Children.map(this.props.children, function(tab, index){
       if(tab.type.displayName === "Tab"){
         if(_this.state.selectedIndex === index) currentTemplate = tab.props.children;
-         return React.addons.cloneWithProps(tab, {
+         return React.cloneElement(tab, {
             key: index,
             selected: _this.state.selectedIndex === index,
             tabIndex: index,
