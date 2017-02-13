@@ -39,6 +39,8 @@ var SlideIn = React.createClass({
       <ReactCSSTransitionGroup {...other}
         className={classes}
         transitionName="mui-transition-slide-in"
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={300}
         component="div">
         {this.props.children}
       </ReactCSSTransitionGroup>
