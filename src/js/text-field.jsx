@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Classable = require('./mixins/classable');
 var UniqueId = require('./utils/unique-id');
 var EnhancedTextarea = require('./enhanced-textarea');
@@ -176,7 +177,7 @@ var TextField = React.createClass({
 
   _getInputNode: function() {
     return this.props.multiLine ?
-      this.refs.input.getInputNode() : React.findDOMNode(this.refs.input);
+      this.refs.input.getInputNode() : ReactDOM.findDOMNode(this.refs.input);
   },
 
   _handleInputBlur: function(e) {
@@ -202,7 +203,7 @@ var TextField = React.createClass({
   _handleTextAreaHeightChange: function(e, height) {
     var newHeight = height + 24;
     if (this.props.floatingLabelText) newHeight += 24;
-    React.findDOMNode(this).style.height = newHeight + 'px';
+      ReactDOM.findDOMNode(this).style.height = newHeight + 'px';
   },
 
   _isControlled: function() {

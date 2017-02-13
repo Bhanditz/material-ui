@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var CssEvent = require('../utils/css-event');
 var Dom = require('../utils/dom');
 var KeyLine = require('../utils/key-line');
@@ -72,8 +73,8 @@ var NestedMenuItem = React.createClass({
   },
 
   _positionNestedMenu: function() {
-    var el = React.findDOMNode(this),
-      nestedMenu = React.findDOMNode(this.refs.nestedMenu);
+    var el = ReactDOM.findDOMNode(this),
+      nestedMenu = ReactDOM.findDOMNode(this.refs.nestedMenu);
 
     nestedMenu.style.left = el.offsetWidth + 'px';
   },
@@ -140,7 +141,7 @@ var Menu = React.createClass({
   },
 
   componentDidMount: function() {
-    var el = React.findDOMNode(this);
+    var el = ReactDOM.findDOMNode(this);
 
     //Set the menu width
     this._setKeyWidth(el);
@@ -273,8 +274,8 @@ var Menu = React.createClass({
     var el;
 
     if (this.props.hideable) {
-      el = React.findDOMNode(this);
-      var innerContainer = React.findDOMNode(this.refs.paperContainer.getInnerContainer());
+      el = ReactDOM.findDOMNode(this);
+      var innerContainer = ReactDOM.findDOMNode(this.refs.paperContainer.getInnerContainer());
       
       if (this.props.visible) {
 

@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Classable = require('./mixins/classable');
 var EnhancedButton = require('./enhanced-button');
 var FontIcon = require('./font-icon');
@@ -83,7 +84,7 @@ var IconButton = React.createClass({
   },
 
   _positionTooltip: function() {
-    var tooltip = React.findDOMNode(this.refs.tooltip);
+    var tooltip = ReactDOM.findDOMNode(this.refs.tooltip);
     var tooltipWidth = tooltip.offsetWidth;
     var buttonWidth = 48;
 

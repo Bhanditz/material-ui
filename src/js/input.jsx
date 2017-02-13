@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Classable = require('./mixins/classable');
 var ClassNames = require('classnames');
 
@@ -105,11 +106,11 @@ var Input = React.createClass({
   },
 
   blur: function() {
-    if(this.isMounted()) React.findDOMNode(this.refs.input).blur();
+    if(this.isMounted()) ReactDOM.findDOMNode(this.refs.input).blur();
   },
   
   focus: function() {
-    if (this.isMounted()) React.findDOMNode(this.refs.input).focus();
+    if (this.isMounted()) ReactDOM.findDOMNode(this.refs.input).focus();
   },
 
   _onInputChange: function(e) {

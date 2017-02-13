@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Classable = require('./mixins/classable');
 
 var Tooltip = React.createClass({
@@ -39,8 +40,8 @@ var Tooltip = React.createClass({
   },
 
   _setRippleSize: function() {
-    var ripple = React.findDOMNode(this.refs.ripple);
-    var tooltipSize = React.findDOMNode(this).offsetWidth;
+    var ripple = ReactDOM.findDOMNode(this.refs.ripple);
+    var tooltipSize = ReactDOM.findDOMNode(this).offsetWidth;
     var ripplePadding = this.props.touch ? 45 : 20;
     var rippleSize = tooltipSize + ripplePadding + 'px';
 

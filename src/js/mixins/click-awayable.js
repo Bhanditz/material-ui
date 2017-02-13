@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Events = require('../utils/events');
 var Dom = require('../utils/dom');
 
@@ -18,7 +19,7 @@ module.exports = {
       if(!this.isMounted()){
           return;
       }
-    var el = React.findDOMNode(this);
+    var el = ReactDOM.findDOMNode(this);
 
     // Check if the target is inside the current component
     if (e.target != el &&

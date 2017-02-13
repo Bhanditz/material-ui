@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var WindowListenable = require('./mixins/window-listenable');
 var CssEvent = require('./utils/css-event');
 var KeyCode = require('./utils/key-code');
@@ -82,7 +83,7 @@ var DialogWindow = React.createClass({
   },
 
   dismiss: function() {
-    CssEvent.onTransitionEnd(React.findDOMNode(this), function() {
+    CssEvent.onTransitionEnd(ReactDOM.findDOMNode(this), function() {
       this.refs.dialogOverlay.allowScrolling();
     }.bind(this));
 
@@ -155,8 +156,8 @@ var DialogWindow = React.createClass({
 
     if (this.state.open) {
 
-      container = React.findDOMNode(this),
-      dialogWindow = React.findDOMNode(this.refs.dialogWindow),
+      container = ReactDOM.findDOMNode(this),
+      dialogWindow = ReactDOM.findDOMNode(this.refs.dialogWindow),
       containerHeight = container.offsetHeight,
 
       //Reset the height in case the window was resized.
@@ -174,7 +175,7 @@ var DialogWindow = React.createClass({
   
   _focusOnAction: function() {
     if (this.props.actionFocus) {
-      React.findDOMNode(this.refs[this.props.actionFocus]).focus();
+        ReactDOM.findDOMNode(this.refs[this.props.actionFocus]).focus();
     }
   },
   
