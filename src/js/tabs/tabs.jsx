@@ -1,4 +1,4 @@
-var React = require('react/addons');
+var React = require('react');
 var Tab = require('./tab');
 var TabTemplate = require('./tabTemplate');
 var InkBar = require('../ink-bar');

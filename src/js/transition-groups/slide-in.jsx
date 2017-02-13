@@ -1,5 +1,5 @@
-var React = require('react/addons');
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+var React = require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 var Classable = require('../mixins/classable');
 
 var SlideIn = React.createClass({
