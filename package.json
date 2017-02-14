@@ -1,5 +1,5 @@
 {
-  "name": "material-ui",
+  "name": "material-ui-legacy",
   "author": "Call-em-all Engineering Team",
   "version": "0.7.5",
   "description": "Material Design UI components built with React",
